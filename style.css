@@ -177,6 +177,7 @@ button:hover {
     margin: 1em 0;
     transition: opacity 0.5s ease-in-out;
     width: 75%;
+    justify-content: center;
 }
 
 .carousel-item.active {
