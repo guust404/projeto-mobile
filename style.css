@@ -1,0 +1,485 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1e4d92;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.menu-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-link:hover {
+    color: #ffcc00;
+}
+
+/* Banner de boas-vindas */
+#welcome {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background-image: url('https://www.civitatis.com/blog/wp-content/uploads/2023/12/shutterstock_318248558-1920x1280.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h1,
+#banner p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em;
+}
+
+#banner h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+#banner p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* Galeria */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 2em;
+    height: 100vh;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.gallery-image {
+    background-image: url('https://www.civitatis.com/blog/wp-content/uploads/2023/12/shutterstock_318248558-1920x1280.jpg');
+    border-radius: 5px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Formulário de Reservas */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+    margin: 2em auto;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+input,
+select {
+    padding: 0.8em;
+    margin-top: 0.5em;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #1e4d92;
+    outline: none;
+}
+
+button {
+    padding: 0.8em;
+    margin-top: 1.5em;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1e4d92;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    color: #ffcc00;
+}
+
+/* Seção de Avaliações */
+#reviews-section {
+    padding: 2em 1em;
+    text-align: center;
+}
+
+#reviews-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 2em;
+}
+
+/* Carrossel */
+#carousel {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+    font-style: italic;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin: 1em 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 75%;
+}
+
+.carousel-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.carousel-item p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.carousel-item strong {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Controles do Carrossel */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2em;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.star-yellow {
+    color: #ffcc00;
+    /* Amarelo para as estrelas preenchidas */
+    font-size: 2em;
+}
+
+.star-gray {
+    color: #ccc;
+    /* Cinza para as estrelas não preenchidas */
+    font-size: 2em;
+}
+
+.rating i {
+    margin-right: 0.2em;
+}
+
+/* Seção Saiba Mais */
+#saiba-mais {
+    padding: 3em 1em;
+    text-align: center;
+}
+
+#saiba-mais h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+#saiba-mais p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #555;
+}
+
+/* Seção de Informações */
+#informacoes {
+    padding: 3em 1em;
+    text-align: center;
+}
+
+#informacoes h2 {
+    font-size: 2.5em;
+    margin-bottom: 2em;
+}
+
+.info-item {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.info-item h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.info-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #1e4d92;
+    color: #fff;
+    margin-top: auto;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    #banner h1 {
+        font-size: 2.5em;
+    }
+
+    #saiba-mais h1 {
+        font-size: 2.2em;
+    }
+
+    #informacoes h2 {
+        font-size: 2.2em;
+    }
+
+    .info-item h3 {
+        font-size: 1.8em;
+    }
+
+    .info-item p {
+        font-size: 1em;
+    }
+
+    form {
+        width: 95%;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 0.9em;
+    }
+
+    #carousel {
+        width: 100%;
+    }
+
+    .carousel-item p {
+        font-size: 1.1em;
+    }
+
+    .carousel-item strong {
+        font-size: 0.9em;
+    }
+
+    #menu {
+        gap: 1em;
+    }
+
+    .menu-link {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;
+        gap: 0.5em;
+        align-items: center;
+    }
+
+    #gallery {
+        grid-template-columns: 1fr;
+    }
+
+    #banner h1 {
+        font-size: 2em;
+    }
+
+    #banner p {
+        font-size: 1em;
+    }
+
+    #saiba-mais h1 {
+        font-size: 2em;
+    }
+
+    #informacoes h2 {
+        font-size: 2em;
+    }
+
+    .info-item h3 {
+        font-size: 1.6em;
+    }
+
+    .info-item p {
+        font-size: 1em;
+    }
+
+    form {
+        width: 95%;
+        padding: 1em;
+    }
+
+    input,
+    select,
+    button {
+        padding: 0.7em;
+        font-size: 0.9em;
+    }
+
+    #carousel {
+        width: 90%;
+    }
+
+    .carousel-item p {
+        font-size: 1em;
+    }
+
+    .carousel-item strong {
+        font-size: 0.9em;
+    }
+
+    .carousel-control {
+        font-size: 1.8em;
+        padding: 0.4em;
+    }
+}
+
+@media (max-width: 576px) {
+    #banner h1 {
+        font-size: 1.8em;
+    }
+
+    #banner p {
+        font-size: 0.9em;
+    }
+
+    #gallery {
+        padding: 1em;
+    }
+
+    form {
+        padding: 0.8em;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 0.85em;
+    }
+
+    #carousel {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .carousel-item p {
+        font-size: 1em;
+    }
+
+    .carousel-item strong {
+        font-size: 0.85em;
+    }
+
+    .carousel-control {
+        font-size: 1.6em;
+        padding: 0.3em;
+    }
+
+    #saiba-mais h1 {
+        font-size: 1.8em;
+    }
+
+    #informacoes h2 {
+        font-size: 1.8em;
+    }
+
+    .info-item h3 {
+        font-size: 1.5em;
+    }
+
+    .info-item p {
+        font-size: 0.9em;
+    }
+
+    #saiba-mais p {
+        font-size: 1em;
+    }
+
+    #informacoes {
+        padding: 2em 0.5em;
+    }
+
+    footer {
+        padding: 0.8em;
+    }
+
+    .menu-link {
+        font-size: 0.7em;
+    }
+}

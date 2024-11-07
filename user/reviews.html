@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Cabeçalho com menu de navegação -->
+    <header>
+        <nav id="menu">
+            <a href="../index.html" class="menu-link" id="home">Início</a>
+            <a href="reservations.html" class="menu-link" id="reservations">Reservas</a>
+            <a href="reviews.html" class="menu-link" id="reviews">Avaliações</a>
+            <a href="more-info.html" class="menu-link" id="more-info">Saiba Mais</a>
+        </nav>
+    </header>
+
+    <!-- Seção de Avaliações -->
+    <section id="reviews-section">
+        <h2>O que nossos clientes dizem</h2>
+
+        <!-- Carrossel de Avaliações -->
+        <div id="carousel">
+            <div class="carousel-item active">
+                <p><strong>- João Silva</strong></p>
+                <p>"Excelente experiência! O hotel tem um atendimento impecável e os quartos são muito confortáveis."
+                </p>
+                <div class="rating">
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-gray"></i>
+                    <i class="fas fa-star star-gray"></i>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <p><strong>- Maria Oliveira</strong></p>
+                <p>"A localização é ótima, muito perto de pontos turísticos. Super recomendo!"</p>
+                <div class="rating">
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-gray"></i>
+                    <i class="fas fa-star star-gray"></i>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <p><strong>- Pedro Santos</strong></p>
+                <p>"Quarto limpo e bem decorado. Atendimento atencioso e eficiente. Voltarei com certeza!"</p>
+                <div class="rating">
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-gray"></i>
+                    <i class="fas fa-star star-gray"></i>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <p><strong>- Ana Costa</strong></p>
+                <p>"Fiquei muito satisfeito com a estadia. O preço é justo pela qualidade oferecida."</p>
+                <div class="rating">
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-yellow"></i>
+                    <i class="fas fa-star star-gray"></i>
+                    <i class="fas fa-star star-gray"></i>
+                </div>
+            </div>
+
+            <!-- Controles do Carrossel -->
+            <button class="carousel-control prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="carousel-control next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 1969 Hotel. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-item');
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
