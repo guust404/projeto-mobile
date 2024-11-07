@@ -223,13 +223,13 @@ button:hover {
 .star-yellow {
     color: #ffcc00;
     /* Amarelo para as estrelas preenchidas */
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .star-gray {
     color: #ccc;
     /* Cinza para as estrelas não preenchidas */
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .rating i {
